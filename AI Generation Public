@@ -1,0 +1,25 @@
+<pip install openai>
+
+import os
+import openai
+
+# Load your API key from an environment variable or secret management service
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+
+openai api chat_completions.create -m gpt-3.5-turbo -g user "Hello world"
+
+npm install openai
+
+const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+const chat_completion = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: "Hello world" }],
+});
+
+
